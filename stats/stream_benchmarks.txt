@@ -1,0 +1,224 @@
+Processing stream.c with pass variant: all
+
+=== Compiling with pass variant: base ===
+Step 1: Compiling C to LLVM IR with ASan...
+Step 2: Running ASan pass...
+Step 3: Running CIMA pass (CIMAPass)...
+CIMA: Instrumented function main
+CIMA: Instrumented function checktick
+CIMA: Instrumented function mysecond
+CIMA: Instrumented function checkSTREAMresults
+CIMA: Instrumented function asan.module_ctor
+CIMA: Instrumented function asan.module_dtor
+Step 4: Linking binary...
+1 warning generated.
+Binary created: build_tests/stream_base_final
+
+--- Running binary: build_tests/stream_base_final ---
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 30262 microseconds.
+   (= 30262 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:            5239.7     0.033257     0.030536     0.042011
+Scale:           4768.8     0.038103     0.033551     0.065692
+Add:             5741.7     0.042799     0.041800     0.044708
+Triad:           4871.2     0.050559     0.049269     0.056495
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+
+
+=== Compiling with pass variant: nearest ===
+Step 2: Running ASan pass...
+Step 3: Running CIMA pass (CIMAPassNearestValid)...
+CIMA: Instrumented function main
+CIMA: Instrumented function checktick
+CIMA: Instrumented function mysecond
+CIMA: Instrumented function checkSTREAMresults
+CIMA: Instrumented function asan.module_ctor
+CIMA: Instrumented function asan.module_dtor
+Step 4: Linking binary...
+1 warning generated.
+Binary created: build_tests/stream_nearest_final
+
+--- Running binary: build_tests/stream_nearest_final ---
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 29762 microseconds.
+   (= 29762 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:            5758.9     0.028001     0.027783     0.028217
+Scale:           4997.3     0.032343     0.032017     0.032568
+Add:             5794.3     0.042021     0.041420     0.042961
+Triad:           4516.5     0.053722     0.053139     0.054251
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+
+
+=== Compiling with pass variant: tainted ===
+Step 2: Running ASan pass...
+Step 3: Running CIMA pass (CIMAPassTainted)...
+Step 4: Linking binary...
+1 warning generated.
+Binary created: build_tests/stream_tainted_final
+
+--- Running binary: build_tests/stream_tainted_final ---
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 117473 microseconds.
+   (= 117473 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:            1357.9     0.119024     0.117825     0.121400
+Scale:           1355.0     0.119574     0.118083     0.122742
+Add:             1662.0     0.146879     0.144406     0.149975
+Triad:           1646.3     0.147320     0.145783     0.150673
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+
+
+=== Compiling with pass variant: asan ===
+Step 2: Running ASan pass...
+Step 3: Skipping CIMA pass (asan variant)
+Step 4: Linking binary...
+1 warning generated.
+Binary created: build_tests/stream_asan_final
+
+--- Running binary: build_tests/stream_asan_final ---
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 25266 microseconds.
+   (= 25266 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:            6479.8     0.024866     0.024692     0.025270
+Scale:           5271.3     0.030624     0.030353     0.030989
+Add:             6522.4     0.037147     0.036796     0.037646
+Triad:           6117.0     0.039585     0.039235     0.040501
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+
+
+=== Compiling with pass variant: none ===
+Step 1: Compiling C to LLVM IR (no instrumentation)...
+Step 2: Skipping ASan pass (none variant)
+Step 3: Skipping CIMA pass (none variant)
+Step 4: Linking binary...
+Binary created: build_tests/stream_none_final
+
+--- Running binary: build_tests/stream_none_final ---
+-------------------------------------------------------------
+STREAM version $Revision: 5.10 $
+-------------------------------------------------------------
+This system uses 8 bytes per array element.
+-------------------------------------------------------------
+Array size = 10000000 (elements), Offset = 0 (elements)
+Memory per array = 76.3 MiB (= 0.1 GiB).
+Total memory required = 228.9 MiB (= 0.2 GiB).
+Each kernel will be executed 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 18639 microseconds.
+   (= 18639 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+Function    Best Rate MB/s  Avg time     Min time     Max time
+Copy:            8248.3     0.019586     0.019398     0.020040
+Scale:          10596.7     0.015192     0.015099     0.015267
+Add:            10915.6     0.022136     0.021987     0.022570
+Triad:          12211.2     0.019792     0.019654     0.019915
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+
+
+=== All variants compiled successfully ===
+Binaries created:
+  - build_tests/stream_base_final
+  - build_tests/stream_nearest_final
+  - build_tests/stream_tainted_final
+  - build_tests/stream_asan_final
+  - build_tests/stream_none_final
+
+=== Pipeline completed successfully ===

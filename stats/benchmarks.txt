@@ -1,0 +1,27 @@
+==========================================================================================
+Benchmarking (User CPU Time) executables in: build_tests/
+Method: Bash built-in 'time'
+Iterations per file: 100
+==========================================================================================
+Filename                            | Avg User(s)  | Min (s)    | Max (s)    | Stdev     
+------------------------------------------------------------------------------------------
+adc_nearest_valid_asan_final        | 0.002460     | 0.000000   | 0.006000   | 0.002272  
+adc_nearest_valid_base_final        | 0.004120     | 0.000000   | 0.009000   | 0.002928  
+adc_nearest_valid_final             | 0.002290     | 0.000000   | 0.006000   | 0.002328  
+adc_nearest_valid_nearest_final     | 0.004150     | 0.000000   | 0.009000   | 0.003030  
+adc_nearest_valid_none_final        | 0.000870     | 0.000000   | 0.001000   | 0.000338  
+adc_nearest_valid_tainted_final     | 0.004270     | 0.000000   | 0.009000   | 0.002636  
+water_treatment_level_attack_asan_final | 0.002120     | 0.000000   | 0.006000   | 0.002226  
+water_treatment_level_attack_base_final | 0.004710     | 0.000000   | 0.008000   | 0.002890  
+water_treatment_level_attack_final  | 0.003780     | 0.000000   | 0.009000   | 0.002642  
+water_treatment_level_attack_nearest_final | 0.004440     | 0.000000   | 0.008000   | 0.002713  
+water_treatment_level_attack_none_final | 0.000850     | 0.000000   | 0.001000   | 0.000359  
+water_treatment_level_attack_tainted_final | 0.004180     | 0.000000   | 0.008000   | 0.002668  
+water_treatment_level_control_asan_final | 0.004430     | 0.000000   | 0.008000   | 0.002332  
+water_treatment_level_control_base_final | 0.004120     | 0.000000   | 0.008000   | 0.002840  
+water_treatment_level_control_final | 0.000880     | 0.000000   | 0.001000   | 0.000327  
+water_treatment_level_control_nearest_final | 0.003870     | 0.000000   | 0.009000   | 0.003054  
+water_treatment_level_control_none_final | 0.000910     | 0.000000   | 0.001000   | 0.000288  
+water_treatment_level_control_tainted_final | 0.004320     | 0.000000   | 0.008000   | 0.002752  
+------------------------------------------------------------------------------------------
+Done.
