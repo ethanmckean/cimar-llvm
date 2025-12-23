@@ -1,9 +1,6 @@
 # CIMA LLVM
 An implementation of [CIMA: Compiler-Enforced Resilience Against Memory Safety Attacks in Cyber-Physical Systems](https://www.sciencedirect.com/science/article/pii/S0167404820301061)
 
-## Dynamic Taint Tracking
-This extension to CIMA uses Dynamic Taint Tracking to propagate tainted undefined values from CIMA, guarding memory stores from tainted data.
-
 ## Repository Organization
 
 - `cimapass/` - LLVM optimization passes implementing CIMA variants
